@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>CREATE DOCTOR</h1>
+<form action="" method="post">
+    {% csrf_token %}
+
+    <label for=""> doctor name</label>
+    <input type="text" name="name" placeholder="enter doctor's name">
+    <label for="">Department</label>
+    <input type="text" name="specialist" placeholder="enter specialization">
+    <input type="submit" value="submit">
+
+</form>
+
+<h2>doctor list</h2>
+{% for doctor in doctors %}
+
+{{doctor.name}}
+{{doctor.specialist}}
+
+{% endfor %}
+</body>
+</html>

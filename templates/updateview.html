@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Update DOCTOR</h1>
+<form action="" method="post">
+    {% csrf_token %}
+
+    <label for=""> doctor name</label>
+    <input type="text" name="name" placeholder="enter doctor's name", value="{{doctor.name}}">
+    <label for="">Department</label>
+    <input type="text" name="specialist" placeholder="enter specialization", value="{{doctor.specialist}}">
+    <input type="submit" value="update">
+
+</form>
+
+</body>
+</html>
